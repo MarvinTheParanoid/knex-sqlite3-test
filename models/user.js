@@ -1,21 +1,12 @@
 // Imports
 const db = require("../data/dbConfig");
 
-// addUser
-function addUser(userData) {
-  return db("user").insert(userData);
-}
-
-// delete user
-
-// update user
-
-// getUsers
-function getUsers() {
-  return db.select().from("user");
+// getUserById
+function getUserById(id) {
+  return db.select("*").from("user").where("user.id", id);
 }
 
 // Exports
 module.exports = {
-  getUsers,
+  getUserById,
 };

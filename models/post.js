@@ -3,6 +3,7 @@ const db = require("../data/dbConfig");
 
 // Return posts, usersname of poster, and comment counts
 function getPosts() {
+  // rename
   return db
     .select([
       "post.id",
@@ -20,12 +21,12 @@ function getPosts() {
 }
 
 // Return single post
-function getPostByID(id) {
-  return "Model called with ID";
+function getPostByPostId(id) {
+  return db.select("*").from("post").where("id", id);
 }
 
 // Exports
 module.exports = {
   getPosts,
-  getPostByID,
+  getPostByPostId,
 };
