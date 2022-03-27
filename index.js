@@ -1,5 +1,5 @@
 // Imports
-const app = require("./server");
+const app = require("./app");
 
 // Listen
 const PORT = process.env.PORT || 3000;
